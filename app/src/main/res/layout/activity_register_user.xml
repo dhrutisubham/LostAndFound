@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="10dp"
+    tools:context=".RegisterUser">
+
+    <ProgressBar
+        android:id="@+id/regPB"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/_564116875598" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:shadowColor="#0288D1"
+        android:text="@string/header"
+        android:textAlignment="center"
+        android:textColor="#009688"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <TextView
+        android:id="@+id/titleOpen2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="#0288D1"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#3F51B5"
+        android:textSize="20sp"
+        android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/regTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="#0288D1"
+        android:text="@string/regisTitle"
+        android:textColor="#3F51B5"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleOpen2" />
+
+    <EditText
+        android:id="@+id/regName"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#0288D1"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="textPersonName|textCapSentences"
+        android:outlineProvider="none"
+        android:shadowColor="#0288D1"
+        android:text="@string/regisName"
+        android:textColor="#512DA8"
+        android:textColorHint="#512DA8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regDP" />
+
+    <EditText
+        android:id="@+id/regEmail"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#0288D1"
+        android:ems="10"
+        android:hint="Institute Mail ID"
+        android:inputType="textEmailAddress"
+        android:outlineProvider="none"
+        android:shadowColor="#0288D1"
+        android:text="@string/regisEmail"
+        android:textColor="#512DA8"
+        android:textColorHint="#512DA8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regRoll" />
+
+    <EditText
+        android:id="@+id/regPW"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#0288D1"
+        android:ems="10"
+        android:hint="Create New Password"
+        android:inputType="textPassword"
+        android:outlineProvider="none"
+        android:shadowColor="#0288D1"
+        android:text="@string/regisPW"
+        android:textColor="#512DA8"
+        android:textColorHint="#512DA8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regEmail" />
+
+    <EditText
+        android:id="@+id/regConfirm"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#0288D1"
+        android:ems="10"
+        android:hint="Confirm New Password"
+        android:inputType="textPassword"
+        android:outlineProvider="none"
+        android:shadowColor="#0288D1"
+        android:text="@string/regisConfirm"
+        android:textColor="#512DA8"
+        android:textColorHint="#512DA8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPW" />
+
+    <EditText
+        android:id="@+id/regWP"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#0288D1"
+        android:ems="10"
+        android:hint="WhatsApp Number"
+        android:inputType="phone"
+        android:outlineProvider="none"
+        android:shadowColor="#0288D1"
+        android:text="@string/regisWP"
+        android:textColor="#512DA8"
+        android:textColorHint="#512DA8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPhone" />
+
+    <EditText
+        android:id="@+id/regPhone"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#0288D1"
+        android:ems="10"
+        android:hint="Enter Phone Number"
+        android:inputType="phone"
+        android:outlineProvider="none"
+        android:shadowColor="#0288D1"
+        android:text="@string/regisPhone"
+        android:textColor="#512DA8"
+        android:textColorHint="#512DA8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regConfirm" />
+
+    <EditText
+        android:id="@+id/regRoll"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#0288D1"
+        android:capitalize="words"
+        android:ems="10"
+        android:hint="Roll Number"
+        android:inputType="textPersonName"
+        android:outlineProvider="none"
+        android:shadowColor="#0288D1"
+        android:text="@string/regisRoll"
+        android:textAllCaps="true"
+        android:textColor="#512DA8"
+        android:textColorHint="#512DA8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regName" />
+
+    <Button
+        android:id="@+id/regSubmit"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regWP" />
+
+    <ImageView
+        android:id="@+id/regDP"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="Profile Picture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regTitle"
+        app:srcCompat="@drawable/pngfind_com_upload_icon_png_661092" />
+
+    <TextView
+        android:id="@+id/regLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="LOG IN"
+        android:textAlignment="center"
+        android:textColor="#512DA8"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="or"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regSubmit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

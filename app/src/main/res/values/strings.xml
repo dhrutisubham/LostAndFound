@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Lost&amp;Found</string>
+    <string name="header">Student Welfare Board</string>
+    <string name="title">Lost &amp; Found</string>
+    <string name="loginUN"></string>
+    <string name="loginPW"></string>
+    <string name="openFPW">Forgot Password?</string>
+    <string name="regisTitle">Register User</string>
+    <string name="regisName"></string>
+    <string name="regisRoll"></string>
+    <string name="regisEmail"></string>
+    <string name="regisPW"></string>
+    <string name="regisConfirm"></string>
+    <string name="regisPhone"></string>
+    <string name="regisWP"></string>
+
+</resources>
