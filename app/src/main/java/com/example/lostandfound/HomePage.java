@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -33,6 +34,10 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
     private DatabaseReference databaseReference;
     private String uName, uRoll, urlDP;
     private StorageReference storageReference, imgpath;
+
+//    public HomePage(Context context){
+//        this.context=context;
+//    }
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -66,10 +71,11 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
                     String Name= userProf.Name;
                     String Roll= userProf.RollNo;
                     String Pfp= userProf.Pfp;
-                    Toast.makeText(HomePage.this, Pfp, Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(HomePage.this, Pfp, Toast.LENGTH_SHORT).show();
                     name.setText(Name);
                     roll.setText(Roll);
                     imgpath= FirebaseStorage.getInstance().getReferenceFromUrl(Pfp);
+                    Glide.with(dp).load(Pfp).into(dp);
 
 
                 }

@@ -70,47 +70,56 @@
         app:layout_constraintTop_toBottomOf="@+id/homeRoll" />
 
     <Button
-        android:id="@+id/homeFeed"
+        android:id="@+id/lostFeed"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Lost and Found Feed"
+        android:text="Lost Feed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeName" />
 
     <Button
+        android:id="@+id/foundFeed"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="Found Feed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lostFeed" />
+
+    <Button
         android:id="@+id/foundItem"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="2dp"
         android:text="Report Found Item"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeFeed" />
-
-    <Button
-        android:id="@+id/lostItem"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Report Lost Item"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/foundItem" />
+        app:layout_constraintTop_toBottomOf="@+id/foundFeed" />
 
     <Button
         android:id="@+id/homeLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:text="Sign Out"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lostItem" />
+
+    <Button
+        android:id="@+id/lostItem"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Report Lost Item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foundItem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
