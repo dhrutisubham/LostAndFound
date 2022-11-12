@@ -26,7 +26,7 @@ import com.google.firebase.storage.StorageReference;
 public class HomePage extends AppCompatActivity implements View.OnClickListener{
 
 
-    private Button logout;
+    private Button logout, lost, found,replost, repfound, posts, udPass;
     private FirebaseUser user;
     private FirebaseAuth mAuth;
     private TextView roll, name;
@@ -47,6 +47,25 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
 
         logout=(Button) findViewById(R.id.homeLogout);
         logout.setOnClickListener(this);
+
+        lost= (Button)findViewById(R.id.lostFeed);
+        lost.setOnClickListener(this);
+
+        found=(Button)findViewById(R.id.foundFeed);
+        found.setOnClickListener(this);
+
+        replost=(Button)findViewById(R.id.lostItem);
+        replost.setOnClickListener(this);
+
+        repfound=(Button)findViewById(R.id.foundItem);
+        repfound.setOnClickListener(this);
+
+        posts=(Button)findViewById(R.id.myPosts);
+        posts.setOnClickListener(this);
+
+        udPass= (Button)findViewById(R.id.updatePass);
+        udPass.setOnClickListener(this);
+
 
         mAuth= FirebaseAuth.getInstance();
         databaseReference= FirebaseDatabase.getInstance().getReference("Users");
@@ -96,6 +115,24 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
         switch(view.getId()){
             case R.id.homeLogout:
                 logOut();
+                break;
+            case R.id.lostFeed:
+                startActivity(new Intent(HomePage.this, LostFeed.class));
+                break;
+            case R.id.foundFeed:
+                startActivity(new Intent(HomePage.this, FoundFeed.class));
+                break;
+            case R.id.lostItem:
+                startActivity(new Intent(HomePage.this, ReportLost.class));
+                break;
+            case R.id.foundItem:
+                startActivity(new Intent(HomePage.this, ReportFound.class));
+                break;
+            case R.id.myPosts:
+                startActivity(new Intent(HomePage.this, MyPosts.class));
+                break;
+            case R.id.updatePass:
+                startActivity(new Intent(HomePage.this, UpdatePass.class));
                 break;
         }
     }
